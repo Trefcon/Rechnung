@@ -1,0 +1,244 @@
+/* Allgemeine Styles hier */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.invoice-element {
+  width: 794px;
+  margin: 30px auto 0;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: content-box;
+  margin-bottom: 30px;
+}
+
+.invoice-element h1 {
+  text-align: center;
+  color: #0078d4;
+  margin-bottom: 20px;
+}
+
+/* Weitere CSS-Stile für andere Rechnungselemente */
+#company-logo {
+  text-align: right;
+  margin-bottom: 20px;
+  margin-top: -10%;
+}
+
+#company-logo img {
+  width: 10%;
+  height: auto;
+}
+
+.customer-container {
+  text-align: center;
+  padding: 15px;  
+}
+.left-div {
+  display: inline-block;
+  max-width: 500px;
+  text-align: left;
+  padding: 30px;
+  border-radius: 3px;
+  margin: 15px;
+  vertical-align: top;
+}
+.right-div {
+  display: inline-block;
+  max-width: 500px;
+  text-align: left;
+  padding: 30px;
+  border-radius: 3px;
+  margin: 15px;
+}
+
+@media screen and (max-width: 600px) 
+{
+  .left-div, .right-div
+    {
+       max-width: 100%;
+    }
+}
+#company-address,
+#invoice-details,
+#recipient-details,
+#contact-info,
+#service-description{
+  margin-bottom: 20px;
+}
+
+#company-address p,
+#invoice-details p,
+#recipient-details p,
+#contact-info p,
+#service-description p{
+  margin: 5px 0;
+}
+
+#notes textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0078d4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005a9e;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ccc;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+.totals-table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.totals-table td:first-child {
+  font-weight: bold;
+}
+
+.totals-table td:last-child {
+  text-align: right;
+}
+
+.vat-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.vat-checkbox input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+
+/* Neuer Stil für A4-Format */
+
+.invoice-element {
+  width: 794px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: content-box;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Anpassungen für die Rechnungselemente */
+#customer-info,
+#invoice-info,
+#bank-info,
+#customer-section,
+#recipient-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#customer-info h2,
+#invoice-info h3,
+#bank-info h3,
+#customer-section h2,
+#recipient-section h2 {
+  margin: 0;
+}
+
+#customer-info p,
+#invoice-info p,
+#bank-info p,
+#customer-section p,
+#recipient-section p {
+  margin: 0;
+}
+
+#bank-info {
+  margin-top: 30px;
+}
+}
+
+#item-list th:last-child,
+#item-list td:last-child {
+  display: none;
+}
+
+/* Styles für den Druck */
+@media print {
+  /* Formular ausblenden */
+  form {
+    display: none;
+  }
+  
+  /* Checkbox ausblenden */
+  .vat-checkbox {
+    display: none;
+  }
+  
+  /* Druckbutton ausblenden */
+  #print-btn {
+    display: none;
+  }
+   
+  /* Entfernen-Buttons ausblenden */
+  button {
+    display: none;
+  }
+}
+
+@media print {
+  #item-list th:last-child,
+  #item-list td:last-child {
+    display: none;
+  }
+}

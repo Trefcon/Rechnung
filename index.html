@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rechnung</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="invoice-element">
+    <div id="customer-info" contenteditable><div class="customer-container">
+      <h1>RECHNUNG</h1>
+      <!-- Rechnungskopf -->
+      <div id="company-logo">
+        <img src="https://s1.qwant.com/thumbr/474x474/b/7/837aa946f7bb64aa8ab8cb0cf9cbf91d04acac06821c3c878e563ac27f118d/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.m1ar389tpEOAFN1NTurqvwHaHa%26pid%3DApi&q=0&b=1&p=0&a=0" alt="Logo des Unternehmens">
+      </div>
+      <div class="left-div">
+        <p>Firmenname</p>
+        <p>Straße und Nr.</p>
+        <p>PLZ, Ort</p></div>
+      <div class="right-div">
+        <p>01.01.2023</p>
+        <p>RE-NR: 10.02/2023</p></div>
+      <br>
+      <div class="left-div">
+        <p>Name des Empfängers</p>
+        <p>Adresse des Empfängers</p>
+        <p>PLZ, Ort</p></div>
+      
+<div class="right-div">
+        <p>Kontaktinformationen:</p>
+        <p>Telefon: 0123456789</p>
+        <p>E-Mail: info@example.com</p></div>
+      
+      <div id="service-description">
+        <p>Beschreibung der Dienstleistung:</p>
+        <p></p>
+      </div>
+      <div>
+        <p>Zahlungsbedingungen: Zahlbar innerhalb von 14 Tagen</p>
+      </div>
+    </div>
+
+    <!-- Weitere Rechnungselemente -->
+    <form>
+      <label for="description-input">Beschreibung:</label>
+      <input type="text" id="description-input" required><br>
+
+      <label for="quantity-input">Menge:</label>
+      <input type="number" id="quantity-input" required><br>
+
+      <label for="price-input">Preis:</label>
+      <input type="number" step="0.01" id="price-input" required><br>
+
+      <button type="button" id="add-item-btn">Posten hinzufügen</button>
+    </form>
+<br>
+    <table id="item-list">
+      <thead style="border-bottom: 2.5px solid #ccc;">
+        <tr>
+          <th>Beschreibung</th>
+          <th>Menge</th>
+          <th>Preis</th>
+          <th>Gesamt</th>
+          <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dynamisch generierte Posten werden hier eingefügt -->
+      </tbody>
+    </table>
+
+    <div id="totals">
+      <table>
+        <tbody>
+          <tr>
+            <td>Netto Summe:</td>
+            <td id="net-total"></td>
+          </tr>
+          <tr id="vat-row">
+            <td>Mehrwertsteuer (19%):</td>
+            <td id="vat-total"></td>
+          </tr>
+          <tr>
+            <td>Brutto Summe:</td>
+            <td id="gross-total"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="notes">
+      <h3>Notizen:</h3>
+      <textarea></textarea>
+    </div>
+    <div style="margin-top: 10px;"></div> <!-- Abstand vor dem Label -->
+
+<div class="vat-checkbox">
+  <input type="checkbox" id="vat-checkbox-input">
+  <label for="vat-checkbox-input">Mehrwertsteuer hinzufügen</label>
+</div>
+
+
+
+    <button type="button" id="print-btn">Drucken</button>
+    </div></div>
+
+  <script src="script.js"></script>
+  </div>
+</body>
+
+</html>
